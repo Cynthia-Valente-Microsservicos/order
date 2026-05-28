@@ -27,4 +27,7 @@ public interface OrderController {
     public ResponseEntity<OrderOut> findByOrderId(
         @PathVariable String id
     );
+
+    @GetMapping("/orders/health-check")
+    public ResponseEntity<Void> healthCheck();
 }
