@@ -1,4 +1,4 @@
-# order
+# Order
 
 Módulo de contrato compartilhado para o serviço de pedidos. Funciona como uma **biblioteca de API**, definindo as interfaces Feign, DTOs de requisição e resposta que outros microsserviços utilizam para se comunicar com o `order-service`.
 
