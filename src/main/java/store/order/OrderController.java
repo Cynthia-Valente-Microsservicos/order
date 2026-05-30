@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 
-@FeignClient(name = "order", url = "http:")
+@FeignClient(name = "order", url = "http://order:8080")
 public interface OrderController {
 
     @PostMapping("/orders")
     public ResponseEntity<Void> create(
-        @RequestBody OrderIn in
+        @RequestBody OrderIn in,
+        @RequestHeader("idAccount") String idAccount
     );
 
     @GetMapping("/orders")
