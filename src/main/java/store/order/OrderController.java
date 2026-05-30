@@ -16,12 +16,12 @@ public interface OrderController {
     @PostMapping("/orders")
     public ResponseEntity<Void> create(
         @RequestBody OrderIn in,
-        @RequestHeader("idAccount") String idAccount
+        @RequestHeader("id-account") String idAccount
     );
 
     @GetMapping("/orders")
     public ResponseEntity<List<OrderSummaryOut>> findAllByAccount(
-        @RequestHeader("idAccount") String idAccount
+        @RequestHeader("id-account") String idAccount
     );
 
     @GetMapping("/orders/{id}")
